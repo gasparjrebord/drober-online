@@ -1,0 +1,42 @@
+.main-ranking {
+  background-color: $color__red--dark;
+  background-image: linear-gradient(
+    to right,
+    $color__red--dark,
+    $color__red--light
+  );
+  background-repeat: no-repeat;
+  display: block;
+  padding: 30px;
+  &__title {
+    color: $color__gray--dark;
+    text-decoration: underline;
+    font-style: normal;
+    font-size: 35px;
+  }
+  &__text {
+    font-size: 20px;
+    word-spacing: 5px;
+    letter-spacing: 5px;
+    color: $color__gray--light;
+    text-align: left;
+  }
+  &__section {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 80px;
+    &--table {
+      border: 3px solid;
+      th {
+        background-color: $color__gray--light;
+        border: 1px solid;
+      }
+      td {
+        border: 1px solid;
+      }
+    }
+    @include laptop {
+      display: block;
+    }
+  }
+}

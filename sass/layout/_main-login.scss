@@ -1,0 +1,38 @@
+.main-login {
+  background-color: $color__red--dark;
+  background-image: linear-gradient(
+    to right,
+    $color__red--dark,
+    $color__red--light
+  );
+  background-repeat: no-repeat;
+  display: block;
+  padding: 30px;
+  &__section {
+    display: flex;
+    justify-content: center;
+    &--form {
+      width: 500px;
+      background-color: $color__green--mid;
+      background-image: linear-gradient(
+        to right,
+        $color__green--mid,
+        $color__green--dark
+      );
+      padding: 10px;
+      font-size: 15px;
+      .btn-primary {
+        background-color: $color__red--dark;
+        background-image: linear-gradient(
+          to right,
+          $color__red--dark,
+          $color__red--light
+        );
+        border: none;
+      }
+      @include mobile {
+        width: 300px;
+      }
+    }
+  }
+}

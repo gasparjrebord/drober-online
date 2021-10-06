@@ -1,0 +1,51 @@
+.main-inicio {
+  background-color: $color__red--dark;
+  background-image: linear-gradient(
+    to right,
+    $color__red--dark,
+    $color__red--light
+  );
+  background-repeat: no-repeat;
+  display: block;
+  padding: 30px;
+  &__div {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: $color__gray--light;
+    &--h2 {
+      font-size: 40px;
+      @include mobile {
+        font-size: 20px;
+      }
+    }
+    &--btn {
+      border: 5px outset $color__green--mid;
+      background-color: $color__red--dark;
+      background-image: linear-gradient(
+        to right,
+        $color__red--dark,
+        $color__red--light
+      );
+      padding: 15px;
+      transition: 0.5s;
+      a {
+        text-decoration: none;
+        color: $color__gray--light;
+      }
+      &:hover {
+        transform: scale(1.2);
+      }
+      @include mobile {
+        border: 2px outset $color__green--mid;
+      }
+    }
+  }
+  .main-inicio__carousel {
+    margin-left: 15%;
+    margin-right: 15%;
+    &--img {
+      height: 80%;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+footer {
+  grid-area: footer;
+}
+
+.footer {
+  background-color: $color__green--dark;
+  background-image: linear-gradient(
+    to right,
+    $color__green--dark,
+    $color__green--mid
+  );
+  height: 100%;
+  padding: 20px;
+  margin: 20px;
+  align-items: center;
+  &__section {
+    color: $color__red--dark;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 5px 20px;
+    padding: 5px;
+    right: 25px;
+    &--p {
+      font-size: 15px;
+    }
+  }
+}

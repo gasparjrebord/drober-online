@@ -1,0 +1,101 @@
+.main-comunidad {
+  background-color: $color__red--dark;
+  background-image: linear-gradient(
+    to right,
+    $color__red--dark,
+    $color__red--light
+  );
+  background-repeat: no-repeat;
+  display: block;
+  padding: 30px;
+  &__h2 {
+    color: $color__gray--dark;
+  }
+  &__div {
+    margin: 5px;
+    color: $color__gray--light;
+    &--date {
+      color: $color__gray--mid;
+      font-size: 12px;
+    }
+    &--btn {
+      border: 2px outset $color__green--mid;
+      background-color: $color__red--dark;
+      background-image: linear-gradient(
+        to right,
+        $color__red--dark,
+        $color__red--light
+      );
+      padding: 5px;
+      transition: 0.5s;
+      a {
+        text-decoration: none;
+        color: $color__gray--light;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+.section-comunidad {
+  background-color: $color__red--dark;
+  background-image: linear-gradient(
+    to left,
+    $color__red--dark,
+    $color__red--light
+  );
+  background-repeat: no-repeat;
+  display: block;
+  padding: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  .card {
+    background-color: transparent;
+    border: none;
+    width: 235px;
+    @include tablet {
+      width: 170px;
+    }
+    @include mobile {
+      width: 100px;
+      font-size: 10px;
+    }
+  }
+  .card-title {
+    color: $color__gray--dark;
+    @include mobile {
+      font-size: 15px;
+    }
+  }
+  .card-text {
+    color: $color__gray--light;
+  }
+  .card-link {
+    color: $color__gray--light;
+  }
+  &__div {
+    &--btn {
+      border: 2px outset $color__green--mid;
+      background-color: $color__red--dark;
+      background-image: linear-gradient(
+        to left,
+        $color__red--dark,
+        $color__red--light
+      );
+      padding: 5px;
+      transition: 0.5s;
+      a {
+        text-decoration: none;
+        color: $color__gray--light;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  @include mobile {
+    padding: 10px;
+  }
+}

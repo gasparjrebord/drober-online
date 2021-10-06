@@ -1,0 +1,44 @@
+.main-acerca-de {
+  background-color: $color__red--dark;
+  background-image: linear-gradient(
+    to right,
+    $color__red--dark,
+    $color__red--light
+  );
+  background-repeat: no-repeat;
+  display: block;
+  padding: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  &__title {
+    color: $color__gray--dark;
+    font-style: normal;
+    font-size: 35px;
+    margin: 40px 20px 20px 20px;
+    @include mobile {
+      font-size: 27px;
+    }
+  }
+  &__text {
+    color: $color__gray--light;
+    text-decoration: none;
+    font-style: normal;
+    font-size: 1rem;
+    margin: 20px 20px 40px 20px;
+    @include mobile {
+      font-size: 0.7rem;
+    }
+  }
+  &__img {
+    height: 500px;
+    width: 270px;
+    @include mobile {
+      height: 300px;
+      width: 150px;
+    }
+  }
+  @include mobile {
+    text-align: left;
+  }
+}
