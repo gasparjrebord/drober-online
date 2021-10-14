@@ -5,7 +5,7 @@
     "main main main main"
     "main main main main"
     "footer footer footer footer";
-  grid-template-rows: auto auto auto 200px;
+  grid-template-rows: auto;
   grid-template-columns: 15% auto auto 15%;
   grid-row-gap: 25px;
   grid-column-gap: 25px;
@@ -24,7 +24,7 @@
     "main main main main"
     "main main main main"
     "footer footer footer footer";
-  grid-template-rows: auto auto auto 200px;
+  grid-template-rows: auto;
   grid-template-columns: 15% auto auto 15%;
   grid-row-gap: 25px;
   grid-column-gap: 25px;
@@ -41,7 +41,7 @@
     "main section"
     "main section"
     "footer footer";
-  grid-template-rows: auto auto auto 200px;
+  grid-template-rows: auto;
   grid-template-columns: auto 315px;
   grid-row-gap: 25px;
   grid-column-gap: 25px;
@@ -57,7 +57,12 @@
     grid-template-columns: auto 250px;
   }
   @include mobile {
-    grid-template-columns: auto 120px;
+    grid-template-areas:
+      "header"
+      "main"
+      "section"
+      "footer";
+    grid-template-columns: auto;
     grid-row-gap: 10px;
     grid-column-gap: 10px;
   }
@@ -69,7 +74,7 @@
     "main main main main"
     "main main main main"
     "footer footer footer footer";
-  grid-template-rows: auto auto auto 200px;
+  grid-template-rows: auto;
   grid-template-columns: 15% auto auto 15%;
   grid-row-gap: 25px;
   grid-column-gap: 25px;
@@ -86,7 +91,7 @@
     "main main main main"
     "main main main main"
     "footer footer footer footer";
-  grid-template-rows: auto auto auto 200px;
+  grid-template-rows: auto;
   grid-template-columns: 15% auto auto 15%;
   grid-row-gap: 25px;
   grid-column-gap: 25px;
@@ -103,7 +108,7 @@
     "main main main main"
     "main main main main"
     "footer footer footer footer";
-  grid-template-rows: auto auto auto 200px;
+  grid-template-rows: auto;
   grid-template-columns: 15% auto auto 15%;
   grid-row-gap: 25px;
   grid-column-gap: 25px;

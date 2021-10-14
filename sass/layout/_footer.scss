@@ -1,5 +1,6 @@
 footer {
   grid-area: footer;
+  font-weight: bold;
 }
 
 .footer {
@@ -10,8 +11,8 @@ footer {
     $color__green--mid
   );
   height: 100%;
-  padding: 20px;
-  margin: 20px;
+  padding: 2%;
+  margin: 2%;
   align-items: center;
   &__section {
     color: $color__red--dark;

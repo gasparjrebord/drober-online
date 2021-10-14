@@ -7,10 +7,11 @@
   );
   background-repeat: no-repeat;
   display: block;
-  padding: 30px;
+  padding: 5%;
   text-align: center;
   align-items: center;
   justify-content: center;
+  text-shadow: 2px 2px 4px black;
   &__title {
     color: $color__gray--dark;
     font-style: normal;
@@ -31,14 +32,17 @@
     }
   }
   &__img {
+    margin: 5%;
     height: 500px;
     width: 270px;
     @include mobile {
-      height: 300px;
+      margin: 1%;
+      height: 275px;
       width: 150px;
     }
   }
   @include mobile {
     text-align: left;
+    padding: 1%;
   }
 }

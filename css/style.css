@@ -11,7 +11,7 @@ body {
 #grid-inicio {
   display: grid;
   grid-template-areas: "header header header header" "main main main main" "main main main main" "footer footer footer footer";
-  grid-template-rows: auto auto auto 200px;
+  grid-template-rows: auto;
   grid-template-columns: 15% auto auto 15%;
   grid-row-gap: 25px;
   grid-column-gap: 25px;
@@ -25,7 +25,7 @@ body {
 #grid-acerca-de {
   display: grid;
   grid-template-areas: "header header header header" "main main main main" "main main main main" "footer footer footer footer";
-  grid-template-rows: auto auto auto 200px;
+  grid-template-rows: auto;
   grid-template-columns: 15% auto auto 15%;
   grid-row-gap: 25px;
   grid-column-gap: 25px;
@@ -37,7 +37,7 @@ body {
 #grid-comunidad {
   display: grid;
   grid-template-areas: "header header" "main section" "main section" "footer footer";
-  grid-template-rows: auto auto auto 200px;
+  grid-template-rows: auto;
   grid-template-columns: auto 315px;
   grid-row-gap: 25px;
   grid-column-gap: 25px;
@@ -52,14 +52,15 @@ body {
       grid-template-columns: auto 250px; } }
   @media screen and (max-width: 425px) {
     #grid-comunidad {
-      grid-template-columns: auto 120px;
+      grid-template-areas: "header" "main" "section" "footer";
+      grid-template-columns: auto;
       grid-row-gap: 10px;
       grid-column-gap: 10px; } }
 
 #grid-ranking {
   display: grid;
   grid-template-areas: "header header header header" "main main main main" "main main main main" "footer footer footer footer";
-  grid-template-rows: auto auto auto 200px;
+  grid-template-rows: auto;
   grid-template-columns: 15% auto auto 15%;
   grid-row-gap: 25px;
   grid-column-gap: 25px;
@@ -71,7 +72,7 @@ body {
 #grid-login {
   display: grid;
   grid-template-areas: "header header header header" "main main main main" "main main main main" "footer footer footer footer";
-  grid-template-rows: auto auto auto 200px;
+  grid-template-rows: auto;
   grid-template-columns: 15% auto auto 15%;
   grid-row-gap: 25px;
   grid-column-gap: 25px;
@@ -83,7 +84,7 @@ body {
 #grid-error {
   display: grid;
   grid-template-areas: "header header header header" "main main main main" "main main main main" "footer footer footer footer";
-  grid-template-rows: auto auto auto 200px;
+  grid-template-rows: auto;
   grid-template-columns: 15% auto auto 15%;
   grid-row-gap: 25px;
   grid-column-gap: 25px;
@@ -108,7 +109,7 @@ header {
     font-size: 45px; }
     @media screen and (max-width: 425px) {
       .header__nav--h1 {
-        font-size: 30px; } }
+        font-size: 25px; } }
   .header__nav--list {
     border: 5px outset #92ac86;
     margin: 10px;
@@ -129,6 +130,9 @@ header {
     @media screen and (max-width: 1024px) {
       .header__nav--list-text {
         font-size: 20px; } }
+    @media screen and (max-width: 768px) {
+      .header__nav--list-text {
+        text-align: center; } }
 
 .main-inicio {
   background-color: #5a1807;
@@ -161,20 +165,28 @@ header {
         .main-inicio__div--btn {
           border: 2px outset #92ac86; } }
   .main-inicio .main-inicio__carousel {
+    text-shadow: 3px 3px 5px black;
     margin-left: 15%;
     margin-right: 15%; }
     .main-inicio .main-inicio__carousel--img {
       height: 80%; }
+    @media screen and (max-width: 768px) {
+      .main-inicio .main-inicio__carousel {
+        margin: auto; } }
+    @media screen and (max-width: 425px) {
+      .main-inicio .main-inicio__carousel {
+        display: none; } }
 
 .main-acerca-de {
   background-color: #5a1807;
   background-image: linear-gradient(to right, #5a1807, #ba181b);
   background-repeat: no-repeat;
   display: block;
-  padding: 30px;
+  padding: 5%;
   text-align: center;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  text-shadow: 2px 2px 4px black; }
   .main-acerca-de__title {
     color: #888888;
     font-style: normal;
@@ -193,26 +205,29 @@ header {
       .main-acerca-de__text {
         font-size: 0.7rem; } }
   .main-acerca-de__img {
+    margin: 5%;
     height: 500px;
     width: 270px; }
     @media screen and (max-width: 425px) {
       .main-acerca-de__img {
-        height: 300px;
+        margin: 1%;
+        height: 275px;
         width: 150px; } }
   @media screen and (max-width: 425px) {
     .main-acerca-de {
-      text-align: left; } }
+      text-align: left;
+      padding: 1%; } }
 
 .main-comunidad {
   background-color: #5a1807;
   background-image: linear-gradient(to right, #5a1807, #ba181b);
   background-repeat: no-repeat;
   display: block;
-  padding: 30px; }
+  padding: 3%; }
   .main-comunidad__h2 {
     color: #888888; }
   .main-comunidad__div {
-    margin: 5px;
+    margin: 5% 5px;
     color: #b1a7a6; }
     .main-comunidad__div--date {
       color: #9b9b9b;
@@ -221,6 +236,7 @@ header {
       border: 2px outset #92ac86;
       background-color: #5a1807;
       background-image: linear-gradient(to right, #5a1807, #ba181b);
+      background-repeat: no-repeat;
       padding: 5px;
       transition: 0.5s; }
       .main-comunidad__div--btn a {
@@ -233,27 +249,24 @@ header {
   background-color: #5a1807;
   background-image: linear-gradient(to left, #5a1807, #ba181b);
   background-repeat: no-repeat;
-  display: block;
+  display: flex;
   padding: 30px;
   text-align: center;
   align-items: center;
-  justify-content: center; }
+  flex-direction: column; }
   .section-comunidad .card {
     background-color: transparent;
     border: none;
-    width: 235px; }
-    @media screen and (max-width: 768px) {
-      .section-comunidad .card {
-        width: 170px; } }
+    width: 100%; }
     @media screen and (max-width: 425px) {
       .section-comunidad .card {
-        width: 100px;
-        font-size: 10px; } }
+        font-size: 16px;
+        width: 70%; } }
   .section-comunidad .card-title {
     color: #888888; }
     @media screen and (max-width: 425px) {
       .section-comunidad .card-title {
-        font-size: 15px; } }
+        font-size: 20px; } }
   .section-comunidad .card-text {
     color: #b1a7a6; }
   .section-comunidad .card-link {
@@ -310,7 +323,7 @@ header {
   background-image: linear-gradient(to right, #5a1807, #ba181b);
   background-repeat: no-repeat;
   display: block;
-  padding: 30px; }
+  padding: 2%; }
   .main-login__section {
     display: flex;
     justify-content: center; }
@@ -360,14 +373,15 @@ header {
           border: 2px outset #92ac86; } }
 
 footer {
-  grid-area: footer; }
+  grid-area: footer;
+  font-weight: bold; }
 
 .footer {
   background-color: #696047;
   background-image: linear-gradient(to right, #696047, #92ac86);
   height: 100%;
-  padding: 20px;
-  margin: 20px;
+  padding: 2%;
+  margin: 2%;
   align-items: center; }
   .footer__section {
     color: #5a1807;
