@@ -323,7 +323,8 @@ header {
   background-image: linear-gradient(to right, #5a1807, #ba181b);
   background-repeat: no-repeat;
   display: block;
-  padding: 2%; }
+  padding: 2%;
+  font-weight: 600; }
   .main-login__section {
     display: flex;
     justify-content: center; }
